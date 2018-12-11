@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script data-require="angularjs@1.6.4" data-semver="1.6.4" src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container" ng-app="socialApp" ng-controller="myCtrl">
+    <navbar callback="setSearchValue(data)" username="username"></navbar>
+    <div class="row">
+      <div class="col-sm-4">
+        <my-side-bar data="people" handle-click="getPersonInfo(data)" search="searchValue"></my-side-bar>
+      </div>
+      <div ng-show="show" class="col-sm-8">
+        <div class="row">
+          <my-display-pic url="person.img"></my-display-pic>
+          <div class="col-sm-8">
+            <button id="btnColor"class="btn btn-primary ">SEND MESSAGE !</button>
+            <heart-rating rating="person.rating" max="maxRating"></heart-rating>
+          </div>
+        </div>
+        <div class="row">
+          <blockquote>
+            <p>{{person.Description}}</p>
+          </blockquote>
+        </div>
+        <div class="row">
+          <custom-table person="person"></custom-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

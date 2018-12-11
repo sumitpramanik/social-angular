@@ -1,0 +1,10 @@
+<table class="table table-bordered">
+  <thead>
+    <th>Likes</th>
+    <th>DisLikes</th>
+  </thead>
+  <tr ng-class="$even ? 'table-background-even':''" ng-repeat="likes in person.Likes">
+    <td>{{likes}}</td>
+    <td>{{person.Dislikes[$index]}}</td>
+  </tr>
+</table>

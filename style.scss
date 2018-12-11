@@ -1,0 +1,72 @@
+$color_1: white;
+$background_color_1: rgb(58, 61, 55);
+
+/* Styles go here */
+.list-padding {
+	padding: 33px 20px;
+}
+.play {
+	float: right;
+}
+#btnColor {
+	background-color: $background_color_1;
+	color: $color_1;
+}
+input {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	max-width: 25%;
+}
+img {
+	height: 90px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+table {
+	table-collapse: collapse;
+	border: 0.1px solid black;
+	width: 100%;
+	padding: 6px;
+}
+td {
+	border: 0.1px solid black;
+	padding: 6px;
+}
+.table-background-even {
+	background: #f8f5f0;
+}
+.rating {
+	margin-top: 16px;
+	font-size: 21px;
+}
+.username {
+	float: right;
+	padding-top: 2%;
+}
+.inner-addon {
+	position: relative;
+	.glyphicon {
+		position: absolute;
+		padding: 10px;
+		pointer-events: none;
+	}
+}
+.left-addon {
+	.glyphicon {
+		left: 0px;
+	}
+	input {
+		padding-left: 30px;
+	}
+}
+.right-addon {
+	.glyphicon {
+		right: 0px;
+	}
+	input {
+		padding-right: 30px;
+	}
+}
+.heartFont {
+    font-size:16px;
+}
